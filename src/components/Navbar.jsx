@@ -27,7 +27,7 @@ const Navbar = () => {
             <div className="search hidden md:block"><input type="text" placeholder='Search' className='border-2 rounded-md px-2 py-1' /></div>
             <button className='md:hidden' onClick={() => setIsOpen(true)}><Menu size={28} /></button>
             {isOpen && (<div className='fixed inset-0 backdrop-blur-lg z-50' onClick={() => setIsOpen(false)}> </div>)}
-            <div className={`fixed top-0 left-0 h-full w-64 bg-[#05001c] text-white p-2 transform transition-transform duration-300 z-50 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
+            <div className={`fixed top-0 left-0 h-full w-70 bg-[#05001c] text-white p-1 transform transition-transform duration-300 z-50 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
                 <button className='mb-6' onClick={() => setIsOpen(false)}><X size={28} /></button>
                 <nav className='flex flex-col gap-6'>
                     <NavLink to='/' onClick={() => { setIsOpen(false) }} className={({ isActive }) =>
