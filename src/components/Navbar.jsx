@@ -8,19 +8,20 @@ const Navbar = () => {
     return (
         <div className="flex items-center justify-between px-3 py-2 bg-[#05001c] text-white shadow-md">
 
-            <nav className='desktop hidden md:flex gap-8'>
-                <ul>
+            {/* <nav className='desktop hidden md:flex gap-8 m-auto shadow-2xltransition-transform text-gray-400' > */}
+            <nav className='desktop hidden md:flex gap-8 text-gray-400' >
+                <ul className='flex gap-20'>
                     <NavLink to='/' className={({ isActive }) =>
-                        isActive ? "font-bold text-yellow-400" : "hover:text-gray-400"
+                        isActive ? "font-bold text-yellow-400" : "hover:text-white"
                     }> <li>Home</li></NavLink>
                     <NavLink to='/favourite' className={({ isActive }) =>
-                        isActive ? "font-bold text-yellow-400" : "hover:text-gray-400"
+                        isActive ? "font-bold text-yellow-400" : "hover:text-white"
                     }>  <li>Favourites</li></NavLink>
                     <NavLink to='/about' className={({ isActive }) =>
-                        isActive ? "font-bold text-yellow-400" : "hover:text-gray-400"
+                        isActive ? "font-bold text-yellow-400" : "hover:text-white"
                     }><li>About</li></NavLink>
                     <NavLink to='/contact' className={({ isActive }) =>
-                        isActive ? "font-bold text-yellow-400" : "hover:text-gray-400"
+                        isActive ? "font-bold text-yellow-400" : "hover:text-white"
                     }><li>Contact us</li></NavLink>
                 </ul>
             </nav>
@@ -29,18 +30,18 @@ const Navbar = () => {
             {isOpen && (<div className='fixed inset-0 backdrop-blur-lg z-50' onClick={() => setIsOpen(false)}> </div>)}
             <div className={`fixed top-0 left-0 h-full w-70 bg-[#05001c] text-white p-1 transform transition-transform duration-300 z-50 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
                 <button className='mb-6' onClick={() => setIsOpen(false)}><X size={28} /></button>
-                <nav className='flex flex-col gap-6'>
+                <nav className='flex flex-col gap-6 text-gray-400'>
                     <NavLink to='/' onClick={() => { setIsOpen(false) }} className={({ isActive }) =>
-                        isActive ? "font-bold text-yellow-400" : "hover:text-gray-400"
+                        isActive ? "font-bold text-yellow-400" : "hover:text-white"
                     }> Home</NavLink>
                     <NavLink to='/favourite' onClick={() => setIsOpen(false)} className={({ isActive }) =>
-                        isActive ? "font-bold text-yellow-400" : "hover:text-shadow-gray-400"
+                        isActive ? "font-bold text-yellow-400" : "hover:text-white"
                     }>Favourites</NavLink>
                     <NavLink to='/about' onClick={() => setIsOpen(false)} className={({ isActive }) =>
-                        isActive ? "font-bold text-yellow-400" : "hover:text-shadow-gray-400"
+                        isActive ? "font-bold text-yellow-400" : "hover:text-white"
                     }>About</NavLink>
                     <NavLink to='/contact' onClick={() => setIsOpen(false)} className={({ isActive }) =>
-                        isActive ? "font-bold text-yellow-400" : "hover:text-shadow-gray-400"
+                        isActive ? "font-bold text-yellow-400" : "hover:text-white"
                     }>Contact us</NavLink>
 
                 </nav>
